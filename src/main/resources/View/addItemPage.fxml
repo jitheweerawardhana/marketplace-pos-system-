@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.jithendra.controller.AddItemPage">
+   <children>
+      <Label layoutX="287.0" layoutY="63.0" prefHeight="638.0" prefWidth="782.0" style="-fx-background-color: white;" textFill="#0dff00">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txtItemCode" layoutX="325.0" layoutY="184.0" prefHeight="40.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtItemName" layoutX="325.0" layoutY="263.0" prefHeight="40.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtPrice" layoutX="325.0" layoutY="417.0" prefHeight="38.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;" />
+      <TextField fx:id="txtQty" layoutX="325.0" layoutY="492.0" prefHeight="38.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;" />
+      <Label layoutX="325.0" layoutY="158.0" prefHeight="30.0" prefWidth="118.0" text="Item Code -">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="232.0" prefHeight="38.0" prefWidth="130.0" text="Item Name -">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="311.0" prefHeight="38.0" prefWidth="130.0" text="Category -">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="388.0" prefHeight="38.0" prefWidth="130.0" text="Price -">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="325.0" layoutY="462.0" prefHeight="38.0" prefWidth="130.0" text="Quantity -">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="addItemBtn" layoutX="569.0" layoutY="565.0" mnemonicParsing="false" onAction="#addItem" prefHeight="38.0" prefWidth="102.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;" text="Add Item" textFill="#037f8c">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="backBtn" layoutX="325.0" layoutY="565.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="102.0" style="-fx-border-color: #037F8C; -fx-border-width: 2px; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-background-color: white;" text="Clear" textFill="#037f8c">
+         <font>
+            <Font name="Cambria" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtCate" layoutX="325.0" layoutY="341.0" prefHeight="38.0" prefWidth="347.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #037F8C; -fx-border-width: 2px;" />
+      <TableView fx:id="viewtbl" layoutX="693.0" layoutY="78.0" prefHeight="574.0" prefWidth="366.0" style="-fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-color: #037F8C;">
+        <columns>
+          <TableColumn prefWidth="57.60003662109375" text="Code No" />
+            <TableColumn prefWidth="77.599853515625" text="Name" />
+            <TableColumn prefWidth="87.46673583984375" text="Category" />
+            <TableColumn minWidth="0.0" prefWidth="77.33331298828125" text="Price" />
+            <TableColumn prefWidth="62.39999999999998" text="QTY" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="64.0" prefHeight="638.0" prefWidth="250.0" style="-fx-background-color: white;" textFill="#f2f2f2" />
+      <Button fx:id="dashboardBtn" layoutX="65.0" layoutY="100.0" mnemonicParsing="false" onAction="#dashboardPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   DashBoard" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="350.0" layoutY="15.0" prefHeight="38.0" prefWidth="230.0" text="Weerawardhana">
+         <font>
+            <Font name="Elephant" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="15.0" prefHeight="38.0" prefWidth="141.0" text="Super Mart" textFill="#f26835">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="billPageBtn" layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#billPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   Bill System" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="itemaddPageBtn" layoutX="65.0" layoutY="220.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #037f8c; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="Add Item" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOutBtn" layoutX="65.0" layoutY="627.0" mnemonicParsing="false" onAction="#logOut" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #f26835; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    LogOut" textFill="#f26835">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="updatePageBtn" layoutX="65.0" layoutY="280.0" mnemonicParsing="false" onAction="#updatePage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    Update Item" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/13.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="78.0" layoutY="634.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/14.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/17.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMassage" layoutX="391.0" layoutY="627.0" prefHeight="38.0" prefWidth="216.0" textFill="#00ff2b">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

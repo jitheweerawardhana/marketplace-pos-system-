@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.jithendra.controller.DashboardController">
+
+    <stylesheets>
+        <URL value="@../styles/modern-styles.css" />
+    </stylesheets>
+
+    <!-- Modern Styling -->
+    <style>
+        .root {
+        -fx-font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Navigation Button Styles */
+        .nav-button {
+        -fx-background-color: transparent;
+        -fx-min-width: 230;
+        -fx-min-height: 45;
+        -fx-background-radius: 8px;
+        -fx-cursor: hand;
+        -fx-font-size: 15px;
+        -fx-alignment: CENTER_LEFT;
+        -fx-padding: 0 20 0 20;
+        -fx-text-fill: #6c757d;
+        -fx-border-width: 0;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.0), 0, 0, 0, 0);
+        -fx-transition: all 0.3s ease;
+        }
+
+        .nav-button:hover {
+        -fx-background-color: derive(#4361ee, 90%);
+        -fx-text-fill: #4361ee;
+        }
+
+        .nav-button.active {
+        -fx-background-color: #4361ee;
+        -fx-text-fill: white;
+        -fx-effect: dropshadow(gaussian, rgba(67,97,238,0.3), 10, 0, 0, 4);
+        }
+
+        /* Card Styles */
+        .card {
+        -fx-background-color: white;
+        -fx-background-radius: 15px;
+        -fx-padding: 20;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 10, 0, 0, 2);
+        }
+
+        .stat-card {
+        -fx-background-color: white;
+        -fx-background-radius: 12px;
+        -fx-padding: 20;
+        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+        -fx-min-width: 270;
+        -fx-min-height: 120;
+        }
+
+        .stat-title {
+        -fx-font-size: 15px;
+        -fx-text-fill: #6c757d;
+        -fx-font-weight: normal;
+        }
+
+        .stat-value {
+        -fx-font-size: 32px;
+        -fx-text-fill: #4361ee;
+        -fx-font-weight: bold;
+        -fx-padding: 8 0 0 0;
+        }
+
+        /* Chart Styles */
+        .chart {
+        -fx-padding: 15px;
+        }
+
+        .chart-plot-background {
+        -fx-background-color: transparent;
+        }
+
+        .chart-vertical-grid-lines {
+        -fx-stroke: #f0f0f0;
+        }
+
+        .chart-horizontal-grid-lines {
+        -fx-stroke: #f0f0f0;
+        }
+
+        .chart-series-line {
+        -fx-stroke: #4361ee;
+        -fx-stroke-width: 2px;
+        }
+
+        .default-color0.chart-series-line {
+        -fx-stroke: #4361ee;
+        }
+
+        .default-color1.chart-series-line {
+        -fx-stroke: #48cae4;
+        }
+
+        /* Table Styles */
+        .table-view {
+        -fx-background-color: transparent;
+        -fx-border-color: transparent;
+        -fx-border-radius: 8px;
+        -fx-padding: 0;
+        }
+
+        .table-view .column-header {
+        -fx-background-color: #f8f9fa;
+        -fx-padding: 8 15 8 15;
+        }
+
+        .table-view .column-header .label {
+        -fx-text-fill: #495057;
+        -fx-font-weight: 600;
+        }
+
+        .table-view .table-row-cell {
+        -fx-background-color: white;
+        -fx-border-color: transparent transparent #f8f9fa transparent;
+        }
+
+        .table-view .table-row-cell:hover {
+        -fx-background-color: #f8f9fa;
+        }
+
+        /* Scroll Bar */
+        .scroll-bar:vertical {
+        -fx-background-color: transparent;
+        -fx-pref-width: 8;
+        }
+
+        .scroll-bar:vertical .thumb {
+        -fx-background-color: #dee2e6;
+        -fx-background-radius: 4em;
+        }
+
+        .scroll-bar:vertical .thumb:hover {
+        -fx-background-color: #adb5bd;
+        }
+    </style>
+
+    <!-- Sidebar Navigation -->
+    <VBox layoutX="25.0" layoutY="25.0" prefHeight="750.0" prefWidth="270.0"
+          styleClass="card" spacing="10">
+        <!-- Company Logo & Name -->
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 0 0 20 0;">
+            <ImageView fitHeight="40.0" fitWidth="40.0">
+                <image>
+                    <Image url="@../images/logo.png"/>
+                </image>
+            </ImageView>
+            <VBox>
+                <Label text="Super Mart" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #212529;"/>
+                <Label text="Management System" style="-fx-font-size: 12; -fx-text-fill: #6c757d;"/>
+            </VBox>
+        </HBox>
+
+        <!-- Navigation Buttons -->
+        <Button fx:id="dashboardBtn" styleClass="nav-button, active" mnemonicParsing="false">
+            <graphic>
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../Images/dashboard.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Dashboard"/>
+                </HBox>
+            </graphic>
+        </Button>
+
+        <Button fx:id="billPageBtn" styleClass="nav-button" onAction="#billPage">
+            <graphic>
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../images/bill.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Bill System"/>
+                </HBox>
+            </graphic>
+        </Button>
+
+        <Button fx:id="itemaddPageBtn" styleClass="nav-button" onAction="#addItemPage">
+            <graphic>
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../images/add-item.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Add Item"/>
+                </HBox>
+            </graphic>
+        </Button>
+
+        <Button fx:id="updatePageBtn" styleClass="nav-button" onAction="#updatePage">
+            <graphic>
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../images/update.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Update Item"/>
+                </HBox>
+            </graphic>
+        </Button>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <!-- Logout Button -->
+        <Button fx:id="logOutBtn" styleClass="nav-button" onAction="#logOut"
+                style="-fx-text-fill: #dc3545;">
+            <graphic>
+                <HBox spacing="15" alignment="CENTER_LEFT">
+                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                        <image>
+                            <Image url="@../images/logout.png"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Logout" style="-fx-text-fill: #dc3545;"/>
+                </HBox>
+            </graphic>
+        </Button>
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane layoutX="320.0" layoutY="25.0" prefHeight="750.0" prefWidth="855.0">
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT">
+            <Label text="Welcome back, " style="-fx-font-size: 24; -fx-text-fill: #212529;"/>
+            <Label text="Admin!" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #4361ee;"/>
+        </HBox>
+
+        <!-- Statistics Cards -->
+        <HBox spacing="22" layoutY="60">
+            <VBox styleClass="stat-card">
+                <Label text="Total Revenue" styleClass="stat-title"/>
+                <Label fx:id="totalRevenue" text="Rs. 245,340" styleClass="stat-value"/>
+            </VBox>
+
+            <VBox styleClass="stat-card">
+                <Label text="Total Orders" styleClass="stat-title"/>
+                <Label fx:id="totalOrders" text="1,245" styleClass="stat-value"/>
+            </VBox>
+
+            <VBox styleClass="stat-card">
+                <Label text="Items Sold" styleClass="stat-title"/>
+                <Label fx:id="itemsSold" text="3,467" styleClass="stat-value"/>
+            </VBox>
+        </HBox>
+
+        <!-- Charts & Tables Section -->
+        <VBox layoutY="200" spacing="22">
+            <!-- Sales Chart -->
+            <VBox styleClass="card">
+                <Label text="Sales Overview" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #212529; -fx-padding: 0 0 15 0;"/>
+                <LineChart fx:id="salesLineChart" prefHeight="300" legendVisible="false">
+                    <xAxis>
+                        <CategoryAxis label="Date" tickLabelFill="#6c757d"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Revenue" tickLabelFill="#6c757d"/>
+                    </yAxis>
+                </LineChart>
+            </VBox>
+
+            <!-- Tables Grid -->
+            <HBox spacing="22">
+                <VBox styleClass="card" prefWidth="270">
+                    <Label text="Low Stock Items" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #212529; -fx-padding: 0 0 15 0;"/>
+                    <TableView fx:id="lowStockTable" prefHeight="200">
+                        <columns>
+                            <TableColumn text="Item Name" prefWidth="245"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+
+                <VBox styleClass="card" prefWidth="270">
+                    <Label text="Over Stock Items" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #212529; -fx-padding: 0 0 15 0;"/>
+                    <TableView fx:id="overStockTable" prefHeight="200">
+                        <columns>
+                            <TableColumn text="Item Name" prefWidth="245"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+
+                <VBox styleClass="card" prefWidth="270">
+                    <Label text="Recent Orders" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #212529; -fx-padding: 0 0 15 0;"/>
+                    <TableView fx:id="recentOrderTable" prefHeight="200">
+                        <columns>
+                            <TableColumn text="Time" prefWidth="125"/>
+                            <TableColumn text="Amount" prefWidth="120"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </HBox>
+        </VBox>
+    </AnchorPane>
+
+</AnchorPane>

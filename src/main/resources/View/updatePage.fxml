@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #f2f2f2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.jithendra.controller.UpdatePage">
+   <children>
+      <Label layoutX="283.0" layoutY="64.0" prefHeight="638.0" prefWidth="782.0" style="-fx-background-color: white;" />
+      <Label layoutX="407.0" layoutY="189.0" prefHeight="491.0" prefWidth="561.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: #037F8C; -fx-border-width: 2px;" textFill="#e1e1e1" />
+      <Button fx:id="backBtn" layoutX="477.0" layoutY="612.0" mnemonicParsing="false" onAction="#back" prefHeight="38.0" prefWidth="85.0" style="-fx-background-color: #037F8C; -fx-background-radius: 15px;" text="Cleare" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtSearch" layoutX="407.0" layoutY="132.0" onAction="#searchTxt" prefHeight="38.0" prefWidth="461.0" style="-fx-border-radius: 15px; -fx-border-color: #43CAD9; -fx-background-radius: 15px; -fx-border-width: 2px;" />
+      <Button fx:id="searchBtn" layoutX="883.0" layoutY="132.0" mnemonicParsing="false" onAction="#search" prefHeight="38.0" prefWidth="85.0" style="-fx-background-color: #037F8C; -fx-background-radius: 15px;" text="Seaarch" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="608.0" layoutY="83.0" prefHeight="38.0" prefWidth="209.0" text="Update System">
+         <font>
+            <Font name="Elephant" size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtItemCode" layoutX="607.0" layoutY="239.0" prefHeight="43.0" prefWidth="297.0" promptText="Item Code" />
+      <TextField fx:id="txtItemName" layoutX="608.0" layoutY="311.0" prefHeight="43.0" prefWidth="297.0" promptText="Item Name" />
+      <TextField fx:id="txtCat" layoutX="608.0" layoutY="389.0" prefHeight="43.0" prefWidth="297.0" promptText="Category" />
+      <TextField fx:id="txtPrice" layoutX="608.0" layoutY="462.0" prefHeight="43.0" prefWidth="297.0" promptText="price" />
+      <TextField fx:id="txtQty" layoutX="607.0" layoutY="530.0" prefHeight="43.0" prefWidth="297.0" promptText="Qty" />
+      <Label layoutX="449.0" layoutY="242.0" prefHeight="30.0" prefWidth="95.0" text="Item Code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="317.0" prefHeight="30.0" prefWidth="95.0" text="Item Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="395.0" prefHeight="30.0" prefWidth="95.0" text="Category">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="468.0" prefHeight="30.0" prefWidth="95.0" text="Price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="449.0" layoutY="536.0" prefHeight="30.0" prefWidth="95.0" text="QTY">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="editBtn" layoutX="852.0" layoutY="612.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="85.0" style="-fx-background-color: #037F8C; -fx-background-radius: 15px;" text="Edit" textFill="WHITE">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="20.0" layoutY="64.0" prefHeight="638.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-width: 2px;" textFill="#f2f2f2" />
+      <Button fx:id="dashboardBtn" layoutX="65.0" layoutY="100.0" mnemonicParsing="false" onAction="#dasgboard" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   DashBoard" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="348.0" layoutY="16.0" prefHeight="38.0" prefWidth="230.0" text="Weerawardhana">
+         <font>
+            <Font name="Elephant" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="578.0" layoutY="16.0" prefHeight="38.0" prefWidth="141.0" text="Super Mart" textFill="#f26835">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="billPageBtn" layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#billPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   Bill System" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="itemaddPageBtn" layoutX="65.0" layoutY="220.0" mnemonicParsing="false" onAction="#addItemPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="Add Item" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOutBtn" layoutX="63.0" layoutY="628.0" mnemonicParsing="false" onAction="#logOut" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #f26835; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    LogOut" textFill="#f26835">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="updatePageBtn" layoutX="65.0" layoutY="280.0" mnemonicParsing="false" onAction="#updatePage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #037F8C; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    Update Item" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="75.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/12.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="75.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/14.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/16.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/17.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

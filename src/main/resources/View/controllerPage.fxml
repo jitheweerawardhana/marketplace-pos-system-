@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #f2f2f2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.jithendra.controller.ControllerPage">
+   <children>
+      <Label layoutX="20.0" layoutY="64.0" prefHeight="638.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-width: 2px;" textFill="#f2f2f2" />
+      <Button fx:id="dashboardBtn" layoutX="65.0" layoutY="100.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #037F8C; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   DashBoard" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="350.0" layoutY="15.0" prefHeight="38.0" prefWidth="230.0" text="Weerawardhana">
+         <font>
+            <Font name="Elephant" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="580.0" layoutY="15.0" prefHeight="38.0" prefWidth="141.0" text="Super Mart" textFill="#f26835">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="billPageBtn" layoutX="65.0" layoutY="161.0" mnemonicParsing="false" onAction="#billPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="   Bill System" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="itemaddPageBtn" layoutX="65.0" layoutY="221.0" mnemonicParsing="false" onAction="#addItemPage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="Add Item" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="logOutBtn" layoutX="65.0" layoutY="627.0" mnemonicParsing="false" onAction="#logOut" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #f26835; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    LogOut" textFill="#f26835">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="updatePageBtn" layoutX="65.0" layoutY="281.0" mnemonicParsing="false" onAction="#updatePage" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: white; -fx-border-color: #037F8C; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-width: 2px;" text="    Update Item" textFill="#037f8c">
+         <font>
+            <Font name="Bell MT" size="17.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/12.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="634.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/14.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/8.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="24.0" layoutX="77.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/17.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="308.0" layoutY="83.0" prefHeight="92.0" prefWidth="172.0" />
+      <Pane layoutX="280.0" layoutY="61.0" prefHeight="628.0" prefWidth="790.0" />
+   </children>
+</AnchorPane>

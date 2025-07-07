@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.jithendra.controller.LoginForm">
+   <children>
+
+      <!-- Right Side - Login Form -->
+      <VBox alignment="CENTER" layoutX="470.0" prefHeight="720.0" prefWidth="540.0" spacing="25">
+         <padding>
+            <Insets left="50" right="50" />
+         </padding>
+
+         <Label style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Sign In" />
+
+         <VBox spacing="8">
+            <Label style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Username">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextField fx:id="txtUserName" prefHeight="45" promptText="Enter your username" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #e1e1e1; -fx-border-width: 1; -fx-background-color: white;">
+               <font>
+                  <Font size="15.0" />
+               </font></TextField>
+         </VBox>
+
+         <VBox spacing="8">
+            <Label style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;" text="Password">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <PasswordField fx:id="txtPassword" prefHeight="45" promptText="Enter your password" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #e1e1e1; -fx-border-width: 1; -fx-background-color: white;">
+               <font>
+                  <Font size="15.0" />
+               </font></PasswordField>
+         </VBox>
+
+         <HBox alignment="CENTER" spacing="15">
+            <Button fx:id="clearBtn" onAction="#clear" prefHeight="45" prefWidth="120" style="-fx-background-color: transparent; -fx-border-color: #3498db; -fx-border-radius: 8; -fx-text-fill: #3498db; -fx-cursor: hand;" text="Clear">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+
+            <Button fx:id="logingBtn" onAction="#login" prefHeight="45" prefWidth="120" style="-fx-background-color: #3498db; -fx-background-radius: 8; -fx-text-fill: white; -fx-cursor: hand;" text="Login">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+         </HBox>
+      </VBox>
+      <ImageView fitHeight="720.0" fitWidth="533.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/download%20(6).jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="600.0" layoutY="50.0" prefHeight="42.0" prefWidth="282.0" text="Weerawardhana">
+         <font>
+            <Font name="Elephant" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="660.0" layoutY="90.0" prefHeight="38.0" prefWidth="141.0" text="Super Mart" textFill="#f26835">
+         <font>
+            <Font name="Bell MT Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
